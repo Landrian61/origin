@@ -25,7 +25,7 @@ class AdminMiddleware
             }
 
         }else{
-            return redirect('/login')->with('message','Please Register');
+            return redirect('/register')->with('message','Please Register');
         }
         return $next($request);
     }

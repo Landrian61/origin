@@ -1,9 +1,3 @@
-@extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
-@section('usersidebar')
-
-
-
-
 <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4 "
     id="sidenav-main">
     <div class="sidenav-header">
@@ -12,7 +6,7 @@
         <a class="navbar-brand m-0" href="{{ route('home') }}"
             target="_blank">
             <img src="./img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-            <span class="ms-1 font-weight-bold">Online Library</span>
+            <span class="ms-1 font-weight-bold">E-Library</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -22,14 +16,14 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}" href="{{ route('home') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+                        <img src="./img/online-library.png"  class="navbar-brand-img h-200" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Available Books</span>
                 </a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('profile') }}">
+                <a class="nav-link {{ Route::currentRouteName() == 'profile' ? 'active' : '' }}" href="{{ route('student-profile') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
@@ -37,29 +31,32 @@
                     <span class="nav-link-text ms-1">Profile</span>
                 </a>
             </li>
+            <li class="nav-item mt-3">
+                <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Actions</h6>
+            </li>
             <li class="nav-item">
-                <a class="nav-link {{ str_contains(request()->url(), 'user-management') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'user-management']) }}">
-                    <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-bullet-list-67 text-dark text-sm opacity-10"></i>
+                <a class="nav-link {{ str_contains(request()->url(), 'borrow') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'borrow']) }}">
+                    <div
+                        class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                        <img src="./img/borrow.png"  class="navbar-brand-img h-200" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Borrow Book</span>
                 </a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link {{ str_contains(request()->url(), 'tables') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'tables']) }}">
+              <li class="nav-item">
+                <a class="nav-link {{ str_contains(request()->url(), 'return') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'return']) }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+                        <img src="./img/return.png"  class="navbar-brand-img h-200" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Return Book</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link {{  str_contains(request()->url(), 'billing') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'billing']) }}">
+                <a class="nav-link {{ str_contains(request()->url(), 'feedback') == true ? 'active' : '' }}"  href="{{ route('page', ['page' => 'feedback']) }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+                        <img src="./img/feedback.png"  class="navbar-brand-img h-200" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Feedback</span>
                 </a>
@@ -68,4 +65,4 @@
     </div>
 
 </aside>
-@endsection
+

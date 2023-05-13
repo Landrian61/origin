@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\Models\Book;
+use App\Models\Feedback;
 use App\Models\User;
+use App\Models\Borrow;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -26,7 +28,27 @@ class PageController extends Controller
 
     public function vr()
     {
-        return view("pages.virtual-reality");
+        $comment= Feedback::all();
+        $report= Borrow::all();
+        return view("pages.virtual-reality",compact('report'),compact('comment'));
+    }
+    public function borrow()
+    {
+        $arr= Book::all();
+        return view("pages.borrow",compact('arr'));
+    }
+    public function feedback()
+    {
+        return view("pages.feedback");
+    }
+    public function return()
+    {
+        $ret= Borrow::all();
+        return view("pages.return",compact('ret'));
+    }
+    public function sp()
+    {
+        return view("pages.student-profile");
     }
 
     public function rtl()

@@ -5,8 +5,8 @@
             aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href="{{ route('home') }}"
             target="_blank">
-            <img src="./img/logo-ct-dark.png" class="navbar-brand-img h-100" alt="main_logo">
-            <span class="ms-1 font-weight-bold">Online Library</span>
+            <img src="./img/online-library.png" class="navbar-brand-img h-100" alt="main_logo">
+            <span class="ms-1 font-weight-bold">E-Library</span>
         </a>
     </div>
     <hr class="horizontal dark mt-0">
@@ -16,7 +16,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}" href="{{ route('home') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-tv-2 text-primary text-sm opacity-10"></i>
+                        <img src="./img/online-library.png" class="navbar-brand-img h-100" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Dashboard</span>
                 </a>
@@ -46,7 +46,7 @@
                 <a class="nav-link {{ str_contains(request()->url(), 'tables') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'tables']) }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+                        <img src="./img/ebook.png"  class="navbar-brand-img h-200" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Add Book</span>
                 </a>
@@ -55,7 +55,7 @@
                 <a class="nav-link {{  str_contains(request()->url(), 'billing') == true ? 'active' : '' }}" href="{{ route('page', ['page' => 'billing']) }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+                        <img src="./img/remove.png"  class="navbar-brand-img h-200" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Remove Book</span>
                 </a>
@@ -64,7 +64,7 @@
                 <a class="nav-link {{ Route::currentRouteName() == 'virtual-reality' ? 'active' : '' }}" href="{{ route('virtual-reality') }}">
                     <div
                         class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                        <i class="ni ni-app text-info text-sm opacity-10"></i>
+                        <img src="./img/report.png"  class="navbar-brand-img h-300" alt="main_logo">
                     </div>
                     <span class="nav-link-text ms-1">Report</span>
                 </a>

@@ -4,7 +4,7 @@
     @include('layouts.navbars.guest.navbar')
     <main class="main-content  mt-0">
           <div class="page-header align-items-start min-vh-50 pt-5 pb-11 m-3 border-radius-lg"
-              style="background-image: url('https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/assets/img/signup-cover.jpg'); background-position: top;">
+              style="background-image: url('https://www.demilked.com/magazine/wp-content/uploads/2015/01/majestic-libraries-architecture-photography-19.jpg'); background-position: top;">
               <span class="mask bg-gradient-dark opacity-6"></span>
               <div class="container">
                   <div class="row justify-content-center">
@@ -26,26 +26,15 @@
                           <div class="card-body">
                               <form method="POST" action="{{ route('register.perform') }}">
                                   @csrf
-                                  <div class="flex flex-col mb-3">
-                                      <input type="text" name="firstname" class="form-control" placeholder="FirstName" aria-label="FirstName" value="{{ old('firstname') }}" >
-                                      @error('firstname') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
-                                  </div>
-                                  <div class="flex flex-col mb-3">
-                                      <input type="text" name="lastname" class="form-control" placeholder="LastName" aria-label="LastName" value="{{ old('lastname') }}" >
-                                      @error('lastname') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
-                                  </div>
+                                
 
                                   <div class="flex flex-col mb-3">
                                       <input type="text" name="username" class="form-control" placeholder="Username" aria-label="Name" >
                                       @error('username') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                   </div>
                                   <div class="flex flex-col mb-3">
-                                      <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email" value="{{ old('email') }}" >
+                                      <input type="email" name="email" class="form-control" placeholder="Email" aria-label="Email"  >
                                       @error('email') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
-                                  </div>
-                                  <div class="flex flex-col mb-3">
-                                      <input type="text" name="address" class="form-control" placeholder="Address" aria-label="Name" value="{{ old('address') }}" >
-                                      @error('address') <p class='text-danger text-xs pt-1'> {{ $message }} </p> @enderror
                                   </div>
                                   <div class="flex flex-col mb-3">
                                       <input type="password" name="password" class="form-control" placeholder="Password" aria-label="Password">

@@ -1,7 +1,7 @@
 @extends('layouts.app', ['class' => 'g-sidenav-show bg-gray-100'])
 
 @section('content')
-    @include('layouts.navbars.auth.topnav', ['title' => 'Available Books'])
+    @include('layouts.navbars.auth.topnav', ['title' => 'Borrow Books'])
     <div class="container-fluid py-4">
 
         <div class="row">
@@ -21,7 +21,7 @@
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Title</th>
                                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">
-                                        Author</th>
+                                            Author</th>
                                         <th
                                             class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
                                             Edition</th>
@@ -64,6 +64,14 @@
                                         <td class="align-middle">
                                         <td class="align-middle text-center">
                                             <span class="text-secondary text-xs font-weight-bold">{{$b->copies}}</span>
+                                        </td>
+                                        <td class="align-middle text-center">
+                                          <form action="{{ route('books.add', $b->id) }}" method="POST">
+                                                  @csrf
+                                                
+                                             <button class="btn btn-primary btn-sm ms-auto">Borrow</button>
+                                          </form>
+
                                         </td>
 
                                     </tr>

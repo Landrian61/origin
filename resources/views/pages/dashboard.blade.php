@@ -41,7 +41,7 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div>
-                                                    <img src="{{ asset($b->image) }}"  class="avatar avatar-sm me-3"
+                                                    <img src="{{ asset('storage/' . $b->image) }}"  class="avatar avatar-sm me-3"
                                                     >
                                                 </div>
                                                 <div class="d-flex flex-column justify-content-center">
